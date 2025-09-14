@@ -35,25 +35,16 @@
       60% { transform: translateY(-10px); }
     }
 
-    .about {
-      margin: 30px auto;
-      max-width: 700px;
-      padding: 20px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 15px;
-      font-size: 1.1em;
-    }
-
-    .playlist {
+    .about, .playlist, .song-section, .gallery, .message {
       margin: 40px auto;
-      max-width: 700px;
+      max-width: 800px;
+      padding: 20px;
       background: rgba(255,255,255,0.2);
       border-radius: 15px;
-      padding: 20px;
     }
 
-    .playlist h2 {
-      margin-bottom: 20px;
+    .about p {
+      font-size: 1.1em;
     }
 
     .playlist ul {
@@ -77,16 +68,7 @@
 
     .playlist a:hover {
       background: #ff4081;
-      color: #fff;
       transform: scale(1.1);
-    }
-
-    .song-section {
-      margin: 50px auto;
-      padding: 20px;
-      max-width: 600px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 15px;
     }
 
     audio {
@@ -94,19 +76,57 @@
       width: 100%;
     }
 
-    .message {
-      margin: 50px auto;
-      padding: 20px;
-      font-size: 1.4em;
-      background: rgba(0,0,0,0.3);
-      border-radius: 15px;
-      max-width: 700px;
+    .message p {
+      font-size: 1.3em;
     }
 
     footer {
       margin-top: 50px;
       padding: 20px;
       background: rgba(0,0,0,0.4);
+    }
+
+    /* Gallery styling */
+    .gallery h2 {
+      margin-bottom: 20px;
+    }
+
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .polaroid {
+      background: white;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+      width: 150px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transform: rotate(-3deg);
+      transition: 0.3s;
+    }
+
+    .polaroid:nth-child(even) {
+      transform: rotate(3deg);
+    }
+
+    .polaroid:hover {
+      transform: scale(1.1) rotate(0deg);
+      z-index: 10;
+    }
+
+    .polaroid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
     }
 
     /* Floating hearts */
@@ -128,7 +148,6 @@
       position: fixed;
       width: 10px;
       height: 10px;
-      background-color: yellow;
       top: -10px;
       animation: fall 4s linear infinite;
     }
@@ -176,16 +195,35 @@
     </audio>
   </section>
 
+  <section class="gallery">
+    <h2>📸 Some Lovely Moments</h2>
+    <div class="photos">
+      <div class="polaroid">
+        <img src="photo1.jpg" alt="Boluwatife">
+        <div class="caption">✨ Gorgeous ✨</div>
+      </div>
+      <div class="polaroid">
+        <img src="photo2.jpg" alt="Boluwatife">
+        <div class="caption">💖 Stunning 💖</div>
+      </div>
+      <div class="polaroid">
+        <img src="photo3.jpg" alt="Boluwatife">
+        <div class="caption">🌸 Beautiful 🌸</div>
+      </div>
+    </div>
+    <p>(You can add more pictures later)</p>
+  </section>
+
   <section class="message">
     <p>Boluwatife, you light up every room with your presence.  
     This is just a small way to show how special you are 🌟💕</p>
   </section>
 
   <footer>
-    <p>Made with 💖 by Someone Who Thinks You’re Amazing</p>
+    <p>Made with 💖 by Olori Abi🌚</p>
   </footer>
 
-  <!-- Floating hearts (auto-generate) -->
+  <!-- Floating hearts + confetti -->
   <script>
     function createHeart() {
       const heart = document.createElement("div");
@@ -199,7 +237,6 @@
     }
     setInterval(createHeart, 500);
 
-    // Confetti
     function createConfetti() {
       const confetti = document.createElement("div");
       confetti.classList.add("confetti");
