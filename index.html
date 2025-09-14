@@ -12,6 +12,7 @@
       padding: 0;
       text-align: center;
       color: #fff;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,10 +25,23 @@
       animation: bounce 2s infinite;
     }
 
+    header p {
+      font-size: 1.2em;
+    }
+
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
       40% { transform: translateY(-20px); }
       60% { transform: translateY(-10px); }
+    }
+
+    .about {
+      margin: 30px auto;
+      max-width: 700px;
+      padding: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 15px;
+      font-size: 1.1em;
     }
 
     .playlist {
@@ -94,14 +108,48 @@
       padding: 20px;
       background: rgba(0,0,0,0.4);
     }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff4081;
+      font-size: 20px;
+      animation: floatUp 5s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) rotate(0); opacity: 1; }
+      to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: yellow;
+      top: -10px;
+      animation: fall 4s linear infinite;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(100vh) rotate(720deg); }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>🎉 Happy Birthday Boluwatife 🎂💕</h1>
-    <p>You make the world brighter, just like this playlist ✨</p>
+    <p>Wishing you joy, laughter, and love today and always 💖</p>
   </header>
+
+  <section class="about">
+    <p>This website is a little surprise for you 🎁.  
+    Each song in the playlist starts with a letter from your name — together, they spell **BOLUWATIFE**.  
+    Plus, there’s a goofy custom song just for you 🎶✨</p>
+  </section>
 
   <section class="playlist">
     <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
@@ -129,12 +177,40 @@
   </section>
 
   <section class="message">
-    <p>Boluwatife, you are amazing. May this year bring you laughter, joy, and lots of sweet surprises 🎁✨</p>
+    <p>Boluwatife, you light up every room with your presence.  
+    This is just a small way to show how special you are 🌟💕</p>
   </section>
 
   <footer>
-    <p>Made with 💖 by Someone Who Cares About You</p>
+    <p>Made with 💖 by Someone Who Thinks You’re Amazing</p>
   </footer>
+
+  <!-- Floating hearts (auto-generate) -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 500);
+
+    // Confetti
+    function createConfetti() {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.backgroundColor = ["#ff4081","#ffeb3b","#00e5ff","#76ff03"][Math.floor(Math.random()*4)];
+      confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 4000);
+    }
+    setInterval(createConfetti, 300);
+  </script>
 
 </body>
 </html>
