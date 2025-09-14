@@ -35,16 +35,12 @@
       60% { transform: translateY(-10px); }
     }
 
-    .about, .playlist, .song-section, .gallery, .message {
+    .playlist, .song-section, .gallery, .message {
       margin: 40px auto;
       max-width: 800px;
       padding: 20px;
       background: rgba(255,255,255,0.2);
       border-radius: 15px;
-    }
-
-    .about p {
-      font-size: 1.1em;
     }
 
     .playlist ul {
@@ -53,26 +49,12 @@
     }
 
     .playlist li {
-      margin: 15px 0;
-      font-size: 1.2em;
-    }
-
-    .playlist a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .playlist a:hover {
-      background: #ff4081;
-      transform: scale(1.1);
+      margin: 20px 0;
+      font-size: 1.1em;
     }
 
     audio {
-      margin-top: 15px;
+      margin-top: 10px;
       width: 100%;
     }
 
@@ -129,13 +111,13 @@
       font-style: italic;
     }
 
-    /* Floating hearts */
+    /* Floating hearts (less frequent) */
     .heart {
       position: fixed;
       bottom: -10px;
       color: #ff4081;
       font-size: 20px;
-      animation: floatUp 5s linear infinite;
+      animation: floatUp 6s linear infinite;
     }
 
     @keyframes floatUp {
@@ -164,25 +146,19 @@
     <p>Wishing you joy, laughter, and love today and always 💖</p>
   </header>
 
-  <section class="about">
-    <p>This website is a little surprise for you 🎁.  
-    Each song in the playlist starts with a letter from your name — together, they spell **BOLUWATIFE**.  
-    Plus, there’s a goofy custom song just for you 🎶✨</p>
-  </section>
-
   <section class="playlist">
     <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
     <ul>
-      <li><a href="#" target="_blank">B - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">O - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">L - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">U - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">W - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">A - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">T - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">I - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">F - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">E - [Song Placeholder]</a></li>
+      <li>B - Song 1 <br><audio controls><source src="B.mp3" type="audio/mpeg"></audio></li>
+      <li>O - Song 2 <br><audio controls><source src="O.mp3" type="audio/mpeg"></audio></li>
+      <li>L - Song 3 <br><audio controls><source src="L.mp3" type="audio/mpeg"></audio></li>
+      <li>U - Song 4 <br><audio controls><source src="U.mp3" type="audio/mpeg"></audio></li>
+      <li>W - Song 5 <br><audio controls><source src="W.mp3" type="audio/mpeg"></audio></li>
+      <li>A - Song 6 <br><audio controls><source src="A.mp3" type="audio/mpeg"></audio></li>
+      <li>T - Song 7 <br><audio controls><source src="T.mp3" type="audio/mpeg"></audio></li>
+      <li>I - Song 8 <br><audio controls><source src="I.mp3" type="audio/mpeg"></audio></li>
+      <li>F - Song 9 <br><audio controls><source src="F.mp3" type="audio/mpeg"></audio></li>
+      <li>E - Song 10 <br><audio controls><source src="E.mp3" type="audio/mpeg"></audio></li>
     </ul>
   </section>
 
@@ -215,8 +191,8 @@
   </section>
 
   <section class="message">
-    <p>Boluwatife, you light up every room with your presence.  
-    This is just a small way to show how special you are 🌟💕</p>
+    <p>Boluwatife, you light up every room with your "weird" presence.  
+    This is just a small way to show how special you are to me 🌟💕</p>
   </section>
 
   <footer>
@@ -225,17 +201,18 @@
 
   <!-- Floating hearts + confetti -->
   <script>
+    // Hearts appear less frequently now
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
       heart.textContent = "❤️";
       heart.style.left = Math.random() * 100 + "vw";
       heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
       document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
+      setTimeout(() => heart.remove(), 6000);
     }
-    setInterval(createHeart, 500);
+    setInterval(createHeart, 2000); // was 500ms, now 2000ms (less frequent)
 
     function createConfetti() {
       const confetti = document.createElement("div");
