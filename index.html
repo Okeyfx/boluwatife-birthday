@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -47,7 +47,6 @@
       font-size: 1.1em;
     }
 
-    /* Playlist card styling */
     .card {
       margin: 20px 0;
       padding: 15px;
@@ -90,7 +89,6 @@
       background: rgba(0,0,0,0.4);
     }
 
-    /* Gallery styling */
     .gallery h2 {
       margin-bottom: 20px;
     }
@@ -133,7 +131,6 @@
       font-style: italic;
     }
 
-    /* Floating hearts */
     .heart {
       position: fixed;
       bottom: -10px;
@@ -147,7 +144,6 @@
       to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
     }
 
-    /* Confetti */
     .confetti {
       position: fixed;
       width: 10px;
@@ -174,7 +170,6 @@
     Plus, there’s a goofy custom song just for you 🎶✨</p>
   </section>
 
-  <!-- Playlist with Spotify embeds -->
   <section class="playlist">
     <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
 
@@ -185,7 +180,6 @@
         width="100%" height="152" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-      <p><a class="spotify-link" href="https://open.spotify.com/track/6mwA6YiKDjAUG8kWvRRUPh" target="_blank">Open on Spotify</a></p>
     </div>
 
     <div class="card">
@@ -195,7 +189,6 @@
         width="100%" height="152" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-      <p><a class="spotify-link" href="https://open.spotify.com/track/4YYfRavaS1kl4tFo42EYvK" target="_blank">Open on Spotify</a></p>
     </div>
 
     <div class="card">
@@ -205,17 +198,70 @@
         width="100%" height="152" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-      <p><a class="spotify-link" href="https://open.spotify.com/track/3ibKnFDaa3GhpPGlOUj7ff" target="_blank">Open on Spotify</a></p>
     </div>
 
-    <!-- placeholders for now -->
-    <div class="card"><h3>U — (placeholder)</h3></div>
-    <div class="card"><h3>W — (placeholder)</h3></div>
-    <div class="card"><h3>A — (placeholder)</h3></div>
-    <div class="card"><h3>T — (placeholder)</h3></div>
-    <div class="card"><h3>I — (placeholder)</h3></div>
-    <div class="card"><h3>F — (placeholder)</h3></div>
-    <div class="card"><h3>E — (placeholder)</h3></div>
+    <div class="card">
+      <h3>U — Understand (Omah Lay)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/6fR6Z0Vc1K6yQWNUIKjAIR"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>W — Who’s Your Guy (Spyro)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/5Lgcn7u07bHuqbOtXkN62u"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>A — All of Me (John Legend)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/4Sp3UHSfkcGAaDut0Eie9P"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>T — Thinking Out Loud (Ed Sheeran)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/34gCuhDGsG4bRPIf9bb02f"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>I — If I Ain’t Got You (Alicia Keys)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/0AkBGzjmYas1PVME45PfDn"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>F — Fall (Davido)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/6huU6cSsMC2ragy2ohSo3l"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h3>E — Essence (Wizkid ft. Tems)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/3l3xTXsUXeWlkPqzMs7mPD"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
   </section>
 
   <section class="song-section">
@@ -255,7 +301,6 @@
     <p>Made with 💖 by Olori Abi🌚</p>
   </footer>
 
-  <!-- Floating hearts + confetti -->
   <script>
     function createHeart() {
       const heart = document.createElement("div");
