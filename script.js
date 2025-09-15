@@ -1,26 +1,15 @@
-const birthdayLines = [
-  "Happy Birthday Bolu, today’s your day",
-  "Elizabeth smiling, we’re here to say",
-  "Met you in July at a friends' party",
-  "Romantic, goofy, love we can’t hide",
-  "You say you’re weird, that makes you real",
-  "With every laugh, it’s the best we feel"
-];
+const audio = document.getElementById("birthdaySong");
+const lyrics = document.querySelectorAll(".lyrics-box p");
 
-const container = document.getElementById('birthday-lyrics');
-if (container) {
-  birthdayLines.forEach((line, i) => {
-    const p = document.createElement('p');
-    p.textContent = line;
-    if (i === 0) p.classList.add('active');
-    container.appendChild(p);
+audio.addEventListener("timeupdate", () => {
+  const currentTime = audio.currentTime;
+  lyrics.forEach((line, i) => {
+    const start = parseFloat(line.getAttribute("data-time"));
+    const next = lyrics[i + 1] ? parseFloat(lyrics[i + 1].getAttribute("data-time")) : Infinity;
+    if (currentTime >= start && currentTime < next) {
+      line.classList.add("active");
+    } else {
+      line.classList.remove("active");
+    }
   });
-}
-
-document.addEventListener('click', (e) => {
-  if (e.target.tagName === 'P' && e.target.closest('.lyrics')) {
-    const box = e.target.closest('.lyrics');
-    box.querySelectorAll('p').forEach(p => p.classList.remove('active'));
-    e.target.classList.add('active');
-  }
 });
