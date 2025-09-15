@@ -3,28 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎶 Boluwatife Playlist</title>
+  <title>Birthday Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #121212;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
       color: #fff;
       margin: 0;
       padding: 20px;
     }
 
-    h1 {
+    h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .playlist {
+    /* 🎶 Lyrics Box */
+    .lyrics-box {
+      margin: 20px auto;
       max-width: 600px;
-      margin: 0 auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.2em;
+      line-height: 1.6;
     }
 
-    .song {
-      background: #1e1e1e;
+    .lyrics-box p {
+      margin: 8px 0;
+      transition: 0.3s;
+    }
+
+    .lyrics-box p.active {
+      font-weight: bold;
+      color: #ffeb3b;
+      font-size: 1.3em;
+    }
+
+    /* 💖 Playlist UI */
+    .playlist {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+    }
+
+    .playlist ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .playlist li {
+      background: rgba(255, 255, 255, 0.1);
       margin: 10px 0;
       padding: 15px;
       border-radius: 12px;
@@ -34,12 +67,8 @@
       transition: background 0.3s ease;
     }
 
-    .song:hover {
-      background: #282828;
-    }
-
-    .song-title {
-      font-size: 1rem;
+    .playlist li:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .spotify-link {
@@ -59,48 +88,64 @@
   </style>
 </head>
 <body>
-  <h1>💖 Boluwatife’s Birthday Playlist 💖</h1>
-  <div class="playlist">
-    <div class="song">
-      <span class="song-title">B - Song 1</span>
-      <a class="spotify-link" href="https://open.spotify.com/track/6mwA6YiKDjAUG8kWvRRUPh" target="_blank">Play</a>
+
+  <!-- 🎶 Birthday Song Section FIRST -->
+  <section class="song-section">
+    <h2>🎶 A Special Song Just for You 🎶</h2>
+    <p>I even made you a goofy little Afrobeats birthday song ❤️</p>
+    
+    <!-- Audio Player -->
+    <audio id="birthdaySong" controls>
+      <source src="your-song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Lyrics Display -->
+    <div class="lyrics-box">
+      <p data-time="0">Bolu, you light up my days,</p>
+      <p data-time="5">Elizabeth, your smile's like a melody,</p>
+      <p data-time="10">Weird and wonderful in every way,</p>
+      <p data-time="15">Every moment with you is my remedy.</p>
+      <p data-time="22">I met you in July at a friend’s party,</p>
+      <p data-time="28">Laughing so bright, it stole my heart instantly,</p>
+      <p data-time="34">From that night, I knew you’re one of a kind,</p>
+      <p data-time="40">A mix of magic, mischief, and sunshine.</p>
     </div>
-    <div class="song">
-      <span class="song-title">O - Song 2</span>
-      <a class="spotify-link" href="https://open.spotify.com/track/4YYfRavaS1kl4tFo42EYvK" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">L - Song 3</span>
-      <a class="spotify-link" href="https://open.spotify.com/track/3ibKnFDaa3GhpPGlOUj7ff" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">U - Song 4</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">W - Song 5</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">A - Song 6</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">T - Song 7</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">I - Song 8</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">F - Song 9</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-    <div class="song">
-      <span class="song-title">E - Song 10</span>
-      <a class="spotify-link" href="#" target="_blank">Play</a>
-    </div>
-  </div>
+  </section>
+
+  <!-- 💖 Playlist comes AFTER -->
+  <section class="playlist">
+    <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
+    <ul>
+      <li>B - <a class="spotify-link" href="https://open.spotify.com/track/6mwA6YiKDjAUG8kWvRRUPh" target="_blank">Play</a></li>
+      <li>O - <a class="spotify-link" href="https://open.spotify.com/track/4YYfRavaS1kl4tFo42EYvK" target="_blank">Play</a></li>
+      <li>L - <a class="spotify-link" href="https://open.spotify.com/track/3ibKnFDaa3GhpPGlOUj7ff" target="_blank">Play</a></li>
+      <li>U - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>W - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>A - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>T - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>I - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>F - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+      <li>E - <a class="spotify-link" href="#" target="_blank">Play</a></li>
+    </ul>
+  </section>
+
+  <script>
+    const audio = document.getElementById("birthdaySong");
+    const lyrics = document.querySelectorAll(".lyrics-box p");
+
+    audio.addEventListener("timeupdate", () => {
+      const currentTime = audio.currentTime;
+      lyrics.forEach((line, i) => {
+        const start = parseFloat(line.getAttribute("data-time"));
+        const next = lyrics[i + 1] ? parseFloat(lyrics[i + 1].getAttribute("data-time")) : Infinity;
+        if (currentTime >= start && currentTime < next) {
+          line.classList.add("active");
+        } else {
+          line.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
