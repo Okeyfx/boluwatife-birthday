@@ -47,28 +47,32 @@
       font-size: 1.1em;
     }
 
-    .playlist ul {
-      list-style: none;
-      padding: 0;
+    /* Playlist card styling */
+    .card {
+      margin: 20px 0;
+      padding: 15px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
     }
 
-    .playlist li {
-      margin: 15px 0;
+    .card h3 {
+      margin-bottom: 10px;
       font-size: 1.2em;
     }
 
-    .playlist a {
-      text-decoration: none;
+    .spotify-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      background: #ff4081;
+      border-radius: 8px;
       color: #fff;
-      padding: 10px 15px;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.3);
-      transition: 0.3s;
+      text-decoration: none;
+      font-size: 0.9em;
     }
 
-    .playlist a:hover {
-      background: #ff4081;
-      transform: scale(1.1);
+    .spotify-link:hover {
+      background: #ff79a8;
     }
 
     audio {
@@ -166,24 +170,52 @@
 
   <section class="about">
     <p>This website is a little surprise for you 🎁.  
-    Each song in the playlist starts with a letter from your name — together, they spell **BOLUWATIFE**.  
+    Each song in the playlist starts with a letter from your name — together, they spell <b>BOLUWATIFE</b>.  
     Plus, there’s a goofy custom song just for you 🎶✨</p>
   </section>
 
+  <!-- Playlist with Spotify embeds -->
   <section class="playlist">
     <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
-    <ul>
-      <li><a href="#" target="_blank">B - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">O - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">L - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">U - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">W - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">A - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">T - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">I - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">F - [Song Placeholder]</a></li>
-      <li><a href="#" target="_blank">E - [Song Placeholder]</a></li>
-    </ul>
+
+    <div class="card">
+      <h3>B — Baby Riddim (Fave)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/6mwA6YiKDjAUG8kWvRRUPh"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+      <p><a class="spotify-link" href="https://open.spotify.com/track/6mwA6YiKDjAUG8kWvRRUPh" target="_blank">Open on Spotify</a></p>
+    </div>
+
+    <div class="card">
+      <h3>O — Only You (Ric Hassani)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/4YYfRavaS1kl4tFo42EYvK"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+      <p><a class="spotify-link" href="https://open.spotify.com/track/4YYfRavaS1kl4tFo42EYvK" target="_blank">Open on Spotify</a></p>
+    </div>
+
+    <div class="card">
+      <h3>L — Love Don’t Cost a Dime (Magixx)</h3>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/3ibKnFDaa3GhpPGlOUj7ff"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+      <p><a class="spotify-link" href="https://open.spotify.com/track/3ibKnFDaa3GhpPGlOUj7ff" target="_blank">Open on Spotify</a></p>
+    </div>
+
+    <!-- placeholders for now -->
+    <div class="card"><h3>U — (placeholder)</h3></div>
+    <div class="card"><h3>W — (placeholder)</h3></div>
+    <div class="card"><h3>A — (placeholder)</h3></div>
+    <div class="card"><h3>T — (placeholder)</h3></div>
+    <div class="card"><h3>I — (placeholder)</h3></div>
+    <div class="card"><h3>F — (placeholder)</h3></div>
+    <div class="card"><h3>E — (placeholder)</h3></div>
   </section>
 
   <section class="song-section">
@@ -251,4 +283,3 @@
 
 </body>
 </html>
-
