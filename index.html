@@ -1,48 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bolu Birthday Playlist</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fdfdfd;
-      color: #222;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Boluwatife</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Happy Birthday Boluwatife</h1>
+      <p class="subtitle">A small playlist & a custom song — made just for you</p>
+    </div>
+  </header>
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
+  <main>
+    <!-- Birthday song (Suno upload) -->
+    <section class="section section-player">
+      <h2>Birthday Song (just for Bolu)</h2>
+      <div class="card">
+        <audio id="birthday-audio" controls preload="none">
+          <source src="birthday-song.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
 
-    .section {
-      margin-bottom: 40px;
-    }
+        <div class="lyrics" id="birthday-lyrics" aria-label="Birthday song lyrics">
+          <!-- Lyrics filled by script.js -->
+        </div>
+      </div>
+    </section>
 
-    .player {
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 20px;
-      background: #fff;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    }
+    <!-- Playlist -->
+    <section class="section section-playlist">
+      <h2>Playlist — B O L U W A T I F E</h2>
 
-    audio {
-      width: 100%;
-      margin-top: 10px;
-    }
+      <div class="spotify-row">
+        <a class="spotify-link" href="https://open.spotify.com/playlist/4mLksMptzaAS038lRhYcqH?si=MFOhYIDASxOcPF8oRFrPIQ&pi=-ZG4avrzS_OjX" target="_blank" rel="noopener noreferrer">
+          Listen to playlist on Spotify
+        </a>
+      </div>
 
-    .lyrics {
-      margin-top: 20px;
-      padding: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-      border-radius: 15px;
-      background: #f8f8f8;
-      box-shadow: inset 0px 2px 6px rgba(0,0,0,0.1);
-      text-align: left;
+      <div class="grid-playlist">
+        <!-- B -->
+        <article class="song-card">
+          <h3>B — Baby Riddim</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/rXPfovXw2tw" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+            <p>Sample lyric line 3</p>
+          </div>
+        </article>
+
+        <!-- O -->
+        <article class="song-card">
+          <h3>O — Only You (Ric Hassani)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/Dhek9R3c6TY" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- L -->
+        <article class="song-card">
+          <h3>L — Love Don’t Cost a Dime (Magixx)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/H64QG4UsrGI" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- U -->
+        <article class="song-card">
+          <h3>U — Understand (Omah Lay)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/RvuVFHTvdaY" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- W -->
+        <article class="song-card">
+          <h3>W — (track)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/nmjdaBaZe8Y" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- A -->
+        <article class="song-card">
+          <h3>A — African Queen (2Face)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/DeQkCrNbHfg" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- T -->
+        <article class="song-card">
+          <h3>T — (track)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/lp-EO5I60KA" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- I -->
+        <article class="song-card">
+          <h3>I — If Love Is a Crime (2Face)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/s47n8E2BuWc" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- F -->
+        <article class="song-card">
+          <h3>F — Forever (Gyakie)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/6unnNvyupos" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+
+        <!-- E -->
+        <article class="song-card">
+          <h3>E — (track)</h3>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/zDKO6XYXioc" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="lyrics small-lyrics">
+            <p>Sample lyric line 1</p>
+            <p>Sample lyric line 2</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with ♥ by Olori Abi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
