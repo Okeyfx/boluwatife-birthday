@@ -3,228 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Boluwatife 🎂💕</title>
+  <title>Bolu Birthday Playlist</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #222;
       margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.3);
-    }
-
-    header h1 {
-      font-size: 2.8em;
-      animation: bounce 2s infinite;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-20px); }
-      60% { transform: translateY(-10px); }
-    }
-
-    .playlist, .song-section, .gallery, .message {
-      margin: 40px auto;
-      max-width: 800px;
       padding: 20px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 15px;
+      text-align: center;
     }
 
-    .playlist ul {
-      list-style: none;
-      padding: 0;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    .playlist li {
-      margin: 20px 0;
-      font-size: 1.1em;
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .player {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
     }
 
     audio {
+      width: 100%;
       margin-top: 10px;
-      width: 100%;
     }
 
-    .message p {
-      font-size: 1.3em;
-    }
-
-    footer {
-      margin-top: 50px;
+    .lyrics {
+      margin-top: 20px;
       padding: 20px;
-      background: rgba(0,0,0,0.4);
-    }
-
-    /* Gallery styling */
-    .gallery h2 {
-      margin-bottom: 20px;
-    }
-
-    .photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .polaroid {
-      background: white;
-      color: black;
-      padding: 10px;
-      border-radius: 10px;
-      width: 150px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transform: rotate(-3deg);
-      transition: 0.3s;
-    }
-
-    .polaroid:nth-child(even) {
-      transform: rotate(3deg);
-    }
-
-    .polaroid:hover {
-      transform: scale(1.1) rotate(0deg);
-      z-index: 10;
-    }
-
-    .polaroid img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .caption {
-      margin-top: 5px;
-      font-size: 0.9em;
-      font-style: italic;
-    }
-
-    /* Floating hearts (less frequent) */
-    .heart {
-      position: fixed;
-      bottom: -10px;
-      color: #ff4081;
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-    }
-
-    @keyframes floatUp {
-      from { transform: translateY(0) rotate(0); opacity: 1; }
-      to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-    }
-
-    /* Confetti */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      top: -10px;
-      animation: fall 4s linear infinite;
-    }
-
-    @keyframes fall {
-      to { transform: translateY(100vh) rotate(720deg); }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>🎉 Happy Birthday Boluwatife 🎂💕</h1>
-    <p>Wishing you joy, laughter, and love today and always 💖</p>
-  </header>
-
-  <section class="playlist">
-    <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
-    <ul>
-      <li>B - Song 1 <br><audio controls><source src="B.mp3" type="audio/mpeg"></audio></li>
-      <li>O - Song 2 <br><audio controls><source src="O.mp3" type="audio/mpeg"></audio></li>
-      <li>L - Song 3 <br><audio controls><source src="L.mp3" type="audio/mpeg"></audio></li>
-      <li>U - Song 4 <br><audio controls><source src="U.mp3" type="audio/mpeg"></audio></li>
-      <li>W - Song 5 <br><audio controls><source src="W.mp3" type="audio/mpeg"></audio></li>
-      <li>A - Song 6 <br><audio controls><source src="A.mp3" type="audio/mpeg"></audio></li>
-      <li>T - Song 7 <br><audio controls><source src="T.mp3" type="audio/mpeg"></audio></li>
-      <li>I - Song 8 <br><audio controls><source src="I.mp3" type="audio/mpeg"></audio></li>
-      <li>F - Song 9 <br><audio controls><source src="F.mp3" type="audio/mpeg"></audio></li>
-      <li>E - Song 10 <br><audio controls><source src="E.mp3" type="audio/mpeg"></audio></li>
-    </ul>
-  </section>
-
-  <section class="song-section">
-    <h2>🎶 A Special Song Just for You 🎶</h2>
-    <p>I even made you a goofy little song ❤️</p>
-    <audio controls>
-      <source src="your-song.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-  <section class="gallery">
-    <h2>📸 Some Lovely Moments</h2>
-    <div class="photos">
-      <div class="polaroid">
-        <img src="photo1.jpg" alt="Boluwatife">
-        <div class="caption">✨ Gorgeous ✨</div>
-      </div>
-      <div class="polaroid">
-        <img src="photo2.jpg" alt="Boluwatife">
-        <div class="caption">💖 Stunning 💖</div>
-      </div>
-      <div class="polaroid">
-        <img src="photo3.jpg" alt="Boluwatife">
-        <div class="caption">🌸 Beautiful 🌸</div>
-      </div>
-    </div>
-    <p>(You can add more pictures later)</p>
-  </section>
-
-  <section class="message">
-    <p>Boluwatife, you light up every room with your "weird" presence.  
-    This is just a small way to show how special you are to me 🌟💕</p>
-  </section>
-
-  <footer>
-    <p>Made with 💖 by Olori Abi🌚</p>
-  </footer>
-
-  <!-- Floating hearts + confetti -->
-  <script>
-    // Hearts appear less frequently now
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.textContent = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-    setInterval(createHeart, 2000); // was 500ms, now 2000ms (less frequent)
-
-    function createConfetti() {
-      const confetti = document.createElement("div");
-      confetti.classList.add("confetti");
-      confetti.style.left = Math.random() * 100 + "vw";
-      confetti.style.backgroundColor = ["#ff4081","#ffeb3b","#00e5ff","#76ff03"][Math.floor(Math.random()*4)];
-      confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 4000);
-    }
-    setInterval(createConfetti, 300);
-  </script>
-
-</body>
-</html>
+      max-height: 300px;
+      overflow-y: auto;
+      border-radius: 15px;
+      background: #f8f8f8;
+      box-shadow: inset 0px 2px 6px rgba(0,0,0,0.1);
+      text-align: left;
