@@ -46,6 +46,22 @@
       margin-top: 10px;
     }
 
+    .download-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      background: #ff9a9e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .download-link:hover {
+      background: #ff6a88;
+    }
+
     /* Polaroid style for images */
     .polaroid {
       background: white;
@@ -96,71 +112,82 @@
       <audio controls>
         <source src="Back at one (brian mcknight).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Back at one (brian mcknight).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Ololufe (Flavour & Chidinma)</h2>
       <audio controls>
         <source src="Ololufe (flavor and chidinma).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Ololufe (flavor and chidinma).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Let Me Love You (Mario)</h2>
       <audio controls>
         <source src="Let Me Love You (Mario).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Let Me Love You (Mario).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Underneath It All (No Doubt ft. Lady Saw)</h2>
       <audio controls>
         <source src="Underneath It All (No Doubt ft. Lady Saw).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Underneath It All (No Doubt ft. Lady Saw).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>With You (Chris Brown)</h2>
       <audio controls>
         <source src="With You (Chris Brown).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="With You (Chris Brown).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>African Queen (2Face)</h2>
       <audio controls>
         <source src="African queen (2face).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="African queen (2face).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Thinking Out Loud (Ed Sheeran)</h2>
       <audio controls>
         <source src="Thinking Out Loud (Ed Sheeran).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Thinking Out Loud (Ed Sheeran).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>If Love is a Crime (2Face)</h2>
       <audio controls>
         <source src="If love is a crime (2face).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="If love is a crime (2face).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Forever (Gyakie)</h2>
       <audio controls>
         <source src="Forever (Gyakie).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="Forever (Gyakie).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>End of the Road (Boyz II Men)</h2>
       <audio controls>
         <source src="End of the Road (Boyz II Men).mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="End of the Road (Boyz II Men).mp3" download>⬇ Download</a>
     </div>
     <div class="card">
       <h2>Special Birthday Song 🎂</h2>
       <audio controls>
         <source src="birthday-song.mp3" type="audio/mpeg">
       </audio>
+      <a class="download-link" href="birthday-song.mp3" download>⬇ Download</a>
     </div>
   </div>
 
   <script>
-    // Make sure only one song plays at a time
+    // Ensure only one song plays at a time
     const audios = document.querySelectorAll("audio");
     audios.forEach(audio => {
       audio.addEventListener("play", () => {
