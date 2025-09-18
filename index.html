@@ -3,290 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Boluwatife 🎂💕</title>
+  <title>Special Playlist</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
       margin: 0;
       padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       text-align: center;
-      color: #fff;
       overflow-x: hidden;
     }
 
-    header {
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.3);
+    h1 {
+      font-size: 2.5em;
+      margin-top: 20px;
+      color: #fff;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      animation: bounce 2s infinite;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-20px); }
-      60% { transform: translateY(-10px); }
-    }
-
-    .about, .playlist, .song-section, .gallery, .message {
-      margin: 40px auto;
-      max-width: 800px;
-      padding: 20px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 15px;
-    }
-
-    .about p {
-      font-size: 1.1em;
-    }
-
-    /* Playlist card styling */
-    .card {
-      margin: 20px 0;
-      padding: 15px;
-      background: rgba(0,0,0,0.3);
-      border-radius: 12px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    audio {
-      margin-top: 15px;
-      width: 100%;
-    }
-
-    .message p {
-      font-size: 1.3em;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: rgba(0,0,0,0.4);
-    }
-
-    /* Gallery styling */
-    .gallery h2 {
-      margin-bottom: 20px;
-    }
-
-    .photos {
+    .playlist {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      width: 280px;
+      max-width: 90vw;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
     }
 
     .polaroid {
       background: white;
-      color: black;
       padding: 10px;
+      border: 2px solid #ccc;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+      margin: 20px auto;
+      width: 280px;
+      max-width: 90vw;
       border-radius: 10px;
-      width: 150px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transform: rotate(-3deg);
-      transition: 0.3s;
-    }
-
-    .polaroid:nth-child(even) {
-      transform: rotate(3deg);
-    }
-
-    .polaroid:hover {
-      transform: scale(1.1) rotate(0deg);
-      z-index: 10;
     }
 
     .polaroid img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      border-radius: 10px;
     }
 
     .caption {
-      margin-top: 5px;
-      font-size: 0.9em;
-      font-style: italic;
+      padding-top: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #333;
     }
 
-    /* Floating hearts */
-    .heart {
-      position: fixed;
-      bottom: -10px;
-      color: #ff4081;
-      font-size: 20px;
-      animation: floatUp 5s linear infinite;
-    }
-
-    @keyframes floatUp {
-      from { transform: translateY(0) rotate(0); opacity: 1; }
-      to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-    }
-
-    /* Confetti */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      top: -10px;
-      animation: fall 4s linear infinite;
-    }
-
-    @keyframes fall {
-      to { transform: translateY(100vh) rotate(720deg); }
-    }
-
-    /* Mobile responsive adjustments */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .card h3 {
-        font-size: 1rem;
-      }
-
-      audio {
-        width: 100%;
-      }
-
-      .polaroid {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 20px;
-      }
-
-      .polaroid img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    /* Spotify button */
     .spotify-link {
       display: inline-block;
       margin: 20px auto;
-      padding: 12px 25px;
+      padding: 12px 20px;
       background: #1DB954;
       color: white;
       font-weight: bold;
-      border-radius: 30px;
       text-decoration: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
 
     .spotify-link:hover {
       background: #1ed760;
-      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .card {
+        width: 90%;
+      }
+      .polaroid {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>💖 Our Special Playlist 💖</h1>
 
-  <header>
-    <h1>🎉 Happy Birthday Boluwatife 🎂💕</h1>
-    <p>Wishing you joy, laughter, and love today and always 💖</p>
-  </header>
-
-  <section class="about">
-    <p>This website is a little surprise for you 🎁.  
-    Each song in the playlist starts with a letter from your name — together, they spell <b>BOLUWATIFE</b>.  
-    Plus, there’s a goofy custom song just for you 🎶✨</p>
-  </section>
-
-  <!-- Playlist -->
-  <section class="playlist">
-    <h2>💖 Playlist for You (BOLUWATIFE) 💖</h2>
-
-    <div class="card"><h3>B — Back at one (Brian McKnight)</h3><audio controls><source src="Back at one (brian mcknight).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>O — Ololufe (Flavor and Chidinma)</h3><audio controls><source src="Ololufe (flavor and chidinma).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>L — Let Me Love You (Mario)</h3><audio controls><source src="Let Me Love You (Mario).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>U — Underneath It All (No Doubt ft. Lady Saw)</h3><audio controls><source src="Underneath It All (No Doubt ft. Lady Saw).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>W — With You (Chris Brown)</h3><audio controls><source src="With You (Chris Brown).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>A — African Queen (2face)</h3><audio controls><source src="African queen (2face).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>T — Thinking Out Loud (Ed Sheeran)</h3><audio controls><source src="Thinking Out Loud (Ed Sheeran).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>I — If love is a crime (2face)</h3><audio controls><source src="If love is a crime (2face).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>F — Forever (Gyakie)</h3><audio controls><source src="Forever (Gyakie).mp3" type="audio/mpeg"></audio></div>
-    <div class="card"><h3>E — End of the Road (Boyz II Men)</h3><audio controls><source src="End of the Road (Boyz II Men).mp3" type="audio/mpeg"></audio></div>
-  </section>
-
-  <a href="https://open.spotify.com/playlist/4mLksMptzaAS038lRhYcqH?si=ee7127632bb246c8" target="_blank" class="spotify-link">🎵 Open Playlist on Spotify</a>
-
-  <section class="song-section">
-    <h2>🎶 A Special Song Just for You 🎶</h2>
-    <p>I even made you a goofy little song ❤️</p>
-    <audio controls>
-      <source src="birthday-song.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-
-  <section class="gallery">
-    <h2>📸 Some Lovely Moments</h2>
-    <div class="photos">
-      <div class="polaroid"><img src="photo1.jpg" alt="Boluwatife"><div class="caption">✨ Gorgeous ✨</div></div>
-      <div class="polaroid"><img src="photo2.jpg" alt="Boluwatife"><div class="caption">💖 Stunning 💖</div></div>
-      <div class="polaroid"><img src="photo3.jpg" alt="Boluwatife"><div class="caption">🌸 Beautiful 🌸</div></div>
+  <div class="playlist">
+    <div class="card">
+      <p>Back at one (Brian McKnight)</p>
+      <audio controls>
+        <source src="songs/back_at_one.mp3" type="audio/mpeg">
+      </audio>
     </div>
-    <p>(You can add more pictures later)</p>
-  </section>
 
-  <section class="message">
-    <p>Boluwatife, you light up every room with your presence.  
-    This is just a small way to show how special you are 🌟💕</p>
-  </section>
+    <div class="card">
+      <p>Ololufe (Flavor and Chidinma)</p>
+      <audio controls>
+        <source src="songs/ololufe.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
-  <footer>
-    <p>Made with 💖 by Olori Abi🌚</p>
-  </footer>
+    <div class="card">
+      <p>Let Me Love You (Mario)</p>
+      <audio controls>
+        <source src="songs/let_me_love_you.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
-  <!-- Floating hearts + confetti -->
+    <div class="card">
+      <p>Underneath It All (No Doubt ft. Lady Saw)</p>
+      <audio controls>
+        <source src="songs/underneath_it_all.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>With You (Chris Brown)</p>
+      <audio controls>
+        <source src="songs/with_you.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>African Queen (2face)</p>
+      <audio controls>
+        <source src="songs/african_queen.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>Thinking Out Loud (Ed Sheeran)</p>
+      <audio controls>
+        <source src="songs/thinking_out_loud.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>If Love is a Crime (2face)</p>
+      <audio controls>
+        <source src="songs/if_love_is_a_crime.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>Forever (Gyakie)</p>
+      <audio controls>
+        <source src="songs/forever.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <p>End of the Road (Boyz II Men)</p>
+      <audio controls>
+        <source src="songs/end_of_the_road.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img src="images/1.jpg" alt="Memory 1">
+    <div class="caption">❤️ A Special Moment ❤️</div>
+  </div>
+
+  <div class="polaroid">
+    <img src="images/2.jpg" alt="Memory 2">
+    <div class="caption">💞 Beautiful Us 💞</div>
+  </div>
+
+  <div class="polaroid">
+    <img src="images/3.jpg" alt="Memory 3">
+    <div class="caption">🌹 Forever Together 🌹</div>
+  </div>
+
+  <a class="spotify-link" href="https://open.spotify.com/playlist/4mLksMptzaAS038lRhYcqH?si=ee7127632bb246c8" target="_blank">
+    🎵 Listen on Spotify
+  </a>
+
   <script>
-    // Floating hearts
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.textContent = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
-    }
-    setInterval(createHeart, 500);
-
-    // Confetti
-    function createConfetti() {
-      const confetti = document.createElement("div");
-      confetti.classList.add("confetti");
-      confetti.style.left = Math.random() * 100 + "vw";
-      confetti.style.backgroundColor = ["#ff4081","#ffeb3b","#00e5ff","#76ff03"][Math.floor(Math.random()*4)];
-      confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 4000);
-    }
-    setInterval(createConfetti, 300);
-
-    // Allow only one audio playing at a time
+    // Allow only one song to play at a time
     const audios = document.querySelectorAll("audio");
     audios.forEach(audio => {
       audio.addEventListener("play", () => {
         audios.forEach(other => {
-          if (other !== audio) {
-            other.pause();
-          }
+          if (other !== audio) other.pause();
         });
       });
     });
   </script>
-
 </body>
 </html>
