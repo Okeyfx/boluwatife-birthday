@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Boluwatife 🎂💕</title>
-  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Handlee', cursive;
+      font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
       margin: 0;
       padding: 0;
@@ -109,10 +108,8 @@
     }
 
     .polaroid img {
-      max-width: 100%;
-      height: auto;
+      width: 100%;
       border-radius: 8px;
-      display: block;
     }
 
     .caption {
@@ -147,6 +144,23 @@
     @keyframes fall {
       to { transform: translateY(100vh) rotate(720deg); }
     }
+
+    /* Mobile fixes */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .about, .playlist, .song-section, .gallery, .message {
+        margin: 20px;
+        padding: 15px;
+      }
+      .polaroid {
+        width: 120px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -179,9 +193,9 @@
 
     <!-- Spotify link -->
     <p style="margin-top:20px;">
-      👉 <a href="https://open.spotify.com/playlist/4mLksMptzaAS038lRhYcqH?si=ee7127632bb246c8" 
-      target="_blank" style="color:#fff; font-weight:bold; text-decoration:underline;">
-      Listen to this playlist on Spotify 🎵</a>
+      👉 <a href="https://open.spotify.com/playlist/4mLksMptzaAS038lRhYcqH?si=ee7127632bb246c8" target="_blank" style="color:#fff; font-weight:bold; text-decoration:underline;">
+        Listen to this Playlist on Spotify 🎵
+      </a>
     </p>
   </section>
 
@@ -196,9 +210,9 @@
   <section class="gallery">
     <h2>📸 Some Lovely Moments</h2>
     <div class="photos">
-      <div class="polaroid"><img src="photo1.jpg" alt="Boluwatife"><div class="caption">✨ Gorgeous ✨</div></div>
-      <div class="polaroid"><img src="photo2.jpg" alt="Boluwatife"><div class="caption">💖 Stunning 💖</div></div>
-      <div class="polaroid"><img src="photo3.jpg" alt="Boluwatife"><div class="caption">🌸 Beautiful 🌸</div></div>
+      <div class="polaroid"><img src="1.jpg" alt="Boluwatife"><div class="caption">✨ Gorgeous ✨</div></div>
+      <div class="polaroid"><img src="2.jpg" alt="Boluwatife"><div class="caption">💖 Stunning 💖</div></div>
+      <div class="polaroid"><img src="3.jpg" alt="Boluwatife"><div class="caption">🌸 Beautiful 🌸</div></div>
     </div>
     <p>(You can add more pictures later)</p>
   </section>
